@@ -1,0 +1,11 @@
+services:
+  alrp:
+    image: ghcr.io/alexandershelega/alrp-local:main
+    ports:
+      - "8080:8080"
+    restart: always
+    volumes:
+      - ./images:/app/images
+    container_name: alrp-service
+    environment:
+      - TZ=UTC

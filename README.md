@@ -25,6 +25,27 @@ To run the container:
 docker run -p 8080:8080 alrp-local
 ```
 
+## Using Docker Compose
+
+For a more streamlined setup, you can use Docker Compose:
+
+```bash
+# Start the application
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop the application
+docker-compose down
+```
+
+The Docker Compose configuration:
+- Pulls the image from GitHub Container Registry
+- Sets the container to restart automatically
+- Maps port 8080 to the host
+- Mounts the local `./images` directory to `/app/images` in the container
+
 ## CI/CD Pipeline
 
 This project uses GitHub Actions for continuous integration and deployment.
